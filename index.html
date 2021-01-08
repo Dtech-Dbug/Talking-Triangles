@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Triangles.</title>
+</head>
+<body>
+    <nav style="background-color: black; transform: translateY(-1rem); height: 2rem; padding-top: 0.5rem;padding-bottom: 0.5rem;">
+        <ul style="list-style: circle; display: flex;flex-direction: row; justify-content: space-around;" >
+            <li >
+                <a style="color: white; text-decoration: none;" href="/index.html">Learn </a>
+            </li>
+            <li>
+                <a style="text-decoration: none; color: white;" href="#"> Evaluate</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="transform: translateY(-2.3rem); background-color: brown; background-image: url(/george-pagan-iii-WwCTFNpZx8g-unsplash.jpg); background-size: 100% 100%; height: 18rem;">
+        <h1 id="text" style="text-align: center; padding-top: 15%; color: white; ">Welcome To <span style="background-color: white; color: black;">Talking Triangles</span>.</h1>
+         
+    
+    </header>
+
+    <div class="buttons" style="text-align:center; background-color: chocolate; transform: translateY(-2.3rem); height: 3rem; padding-top: 1.3rem;">
+        <button style="margin: 0 1rem; background: crimson; color: white;">Learn</button>
+        <button id="btn2" style="background: crimson; color: white;">Evaluate</button>
+        <button style="background: crimson; color: white; margin: 0 1rem;">Areas and Perimeters</button>
+    </div>
+
+    <div class="  evaluate-inactive evaluate-active" style=" height : 18rem ; padding: 2rem 1.5rem; overflow: wrap;"  >
+        <div class="flex1">
+            <label for="Angle1">1st Angle:
+                <input class="Angle1" style="margin: 0.3rem;" type="text" placeholder="first angle">
+            </label>
+            <label for="Angle2">2nd Angle:
+                <input class="Angle2" style="margin: 0.3rem;" type="text" placeholder="first angle">
+            </label>
+            <label for="Angle3">3rd Angle:
+                <input class="Angle3" style="margin: 0.3rem;" type="text" placeholder="first angle">
+            </label>
+        </div>
+
+        <div class="flex2">
+           <p style="text-decoration: underline;">The First Angle you entered is:<span class="inputShow1"></span> <button class="evaluate-btn1">Check Angle</button> <output class="angleOutput1"> </output> </p>
+           <p style="text-decoration: underline;">The Second Angle you entered is: <span class="inputShow2"></span> <button class="evaluate-btn2">Check Angle</button> <output class="angleOutput2"> </output> </p>
+           <p style="text-decoration: underline;">The Third Angle you entered is: <span class="inputShow3"></span> <button class="evaluate-btn3">Check Angle</button> <output class="angleOutput3"> </output> </p>
+        </div>
+
+        <div class="checkTriangle" style="display: flex; flex-direction: column;">
+            <button style="text-align: center; margin: 0 45%;" class="check">Check</button>
+
+            <output style="margin-bottom: 2rem; margin-top: 0.3rem" id="triangleCheck">Click on the check button to Check your Triangle.</output>
+        </div>
+        
+        
+
+    </div>
+
+
+    <div class="areasAndPerimeters" style="text-align: center; margin-bottom: 1.3rem;">
+        <div class="recap">
+            <h1>Recap.</h1>
+
+            <p> 
+                <b>Perimeter of Triangle:</b> Sum of all sides.
+            </p>
+
+            <p> 
+                <b>Area of Triangle:</b> ½ × base × height
+            </p>
+        </div>
+
+        <div class="play" style="display: flex; justify-content: center; ">
+
+            <div class="perimeters" style="margin: 0rem 1rem; background-color: coral; width: 35%;">
+                <h2>Perimeters</h2>
+
+            </div>
+
+            <div class="areas" style="background-color: cornflowerblue;width: 35%;">
+                <h2>Areas</h2>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="learn" style="text-align: center; background-color: brown;padding: 1rem 1rem;">
+        <h2>What is a Triangle?</h2>
+        <img src="https://media.giphy.com/media/eB5WYVSaOT0qUmHOWA/giphy.gif" alt="">
+
+
+
+        <p style="font-size: 1.1em;">A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry</p>
+         <ul style="list-style: none; background-color: black; color: white; padding: 1rem 0rem ;">More Informations on triangles.
+             <li><b>No. of vertices : 3</b></li>
+             <li><b>No. of Edges: 3</b></li>
+             <li><b>Area: ½ × base × height</b></li>
+             <li><b>Perimeter: Sum of three sides</b></li>
+             <li><b>Sum of interior angles: 180degrees</b></li>
+         </ul>      
+
+
+         <h3>What are the types of Traingles?</h3>
+
+         <p><b>1.Equilateral Triangles:</b> Triangle with same sides and same angles. Which is 60 degrees.</p>
+         <p><b>2.Isoscales Triangles:</b> Triangle in which two side are same and the third one id different. With two same sides,isoscales traingles also have two angles which are equal.</p>
+         <p><b>3.Scalene Triangles:</b> Triangle with three diffrent length of sides and different angles.</p>
+    
+    
+    
+    
+    </div>
+
+    <script>
+        const div1 = document.querySelector('.evaluate-inactive')
+        const btn2= document.getElementById('btn2')
+        const input1 = (document.querySelector('.Angle1'))
+        const input2 = (document.querySelector('.Angle2'))
+        const input3 = (document.querySelector('.Angle3'))
+        const userInputShow1 = document.querySelector('.inputShow1')
+        const userInputShow2 = document.querySelector('.inputShow2')
+        const userInputShow3 = document.querySelector('.inputShow3')
+        const output1 = document.querySelector('.angleOutput1')
+        const output2 = document.querySelector('.angleOutput2')
+        const output3 = document.querySelector('.angleOutput3')
+        const evaluateBtn1 = document.querySelector('.evaluate-btn1')
+        const evaluateBtn2 = document.querySelector('.evaluate-btn2')
+        const evaluateBtn3 = document.querySelector('.evaluate-btn3')
+        const hero = document.querySelector('.hero')
+        const heroText = hero.querySelector('h1')
+        const checkBtn = document.querySelector('.check')
+        const triangleOp = document.getElementById('triangleCheck')
+
+
+        function shadow(e){
+            console.log(e)
+        }
+     function show(e){
+        
+         div1.classList.toggle('evaluate-inactive')
+         
+     }
+     function takeInput(){
+         
+        
+         userInputShow1.innerHTML = input1.value + " degrees"
+         
+         
+        
+         userInputShow2.innerHTML =  input2.value + " degrees"
+         userInputShow3.innerHTML = input3.value + " degrees"
+         
+
+     }
+
+     function showAngleName(e){
+         
+         
+
+            if(input1.value > 0 && input1.value < 90){
+                output1.innerHTML = input1.value + " degrees is a acute angle."
+            }
+            else if(input1.value == 90 ){output1.innerHTML = input1.value + "  degrees is Right  angle."}
+
+            else
+            output1.innerHTML = input1.value + " degrees is an obtuse angle"
+
+            
+         }
+         
+    function showAngleName2(e){
+         
+         
+
+         if(input2.value > 0 && input2.value < 90){
+             output2.innerHTML = input2.value + " degrees is a acute angle."
+         }
+         else if(input2.value == 90 ){output2.innerHTML = input2.value + " degrees is Right  angle."}
+
+         else
+         output2.innerHTML = input2.value + " degrees is an obtuse angle"
+
+         
+      }  
+     
+      function showAngleName3(e){
+         
+         
+
+         if(input3.value > 0 && input3.value < 90){
+             output3.innerHTML = input3.value + " is a acute angle."
+         }
+         else if(input3.value == 90 ){output3.innerHTML = input3.value + " degrees is Right  angle."}
+
+         else
+         output3.innerHTML = input3.value + " degrees is an obtuse angle"
+
+         
+      }   
+       
+      function checkTriangle(){
+        console.log(input1.value)
+         console.log(input2.value)
+         console.log(input3.value)
+          
+          if ( parseInt(input1.value)  + parseInt(input2.value) + parseInt(input3.value)  == 180){
+              if( parseInt(input1.value) == parseInt(input2.value) && parseInt(input2.value) == parseInt(input3.value)){
+                  console.log('equilateral')
+                  triangleOp.innerHTML = " Hooray! It is an Equilateral Triangle"
+              }
+              else if( parseInt(input1.value) == parseInt(input2.value) || parseInt(input2.value) == parseInt(input3.value)){
+                  console.log('Isoscales')
+                  triangleOp.innerHTML = " Hooray! It is an Isoscales Triangle"
+              }
+
+              else {
+                  triangleOp.innerHTML = "Hooray , It is a Scalene Triangle"
+              }
+              
+          }
+           else if ( parseInt(input1.value)  + parseInt(input2.value) + parseInt(input3.value) < 180){
+               triangleOp.innerHTML = "Not a Triangle. The sum of angles is less than 180"
+           }
+          else {
+              triangleOp.innerHTML = "OOPs! This does not form a triangle. The sum of all angles exceeded 180"
+          }
+      }
+
+      btn2.addEventListener('click' , show)
+        input1.addEventListener('keyup' , takeInput)
+        input2.addEventListener('keyup' , takeInput)
+        input3.addEventListener('keyup' , takeInput)
+        hero.addEventListener('click' , shadow)
+        evaluateBtn1.addEventListener('click' , showAngleName)
+        evaluateBtn2.addEventListener('click' , showAngleName2)
+        evaluateBtn3.addEventListener('click' , showAngleName3)
+
+    checkBtn.addEventListener('click' , checkTriangle)
+        
+        // uing foreach , bcz it wa selected with doc.querySelectorAll , and to acces each space, we need to loop thru them
+        // evaluateBtns.forEach(evaluateBtns => evaluateBtns.addEventListener('click' , showAngleName))
+
+        
+            
+        
+    </script>
+    
+</body>
+<style>
+    .evaluate-active{
+        margin: 1rem 0; height: 9em; transform: translateY(-1rem); padding: 0 2rem; background-color: cyan ; display: flex; flex-direction: column; 
+    }
+
+    .evaluate-inactive{
+        display: none;
+    }
+    input{
+        width: 3rem;
+    }
+
+    .evaluate-active{
+        border: 4px solid black;
+        text-align: center;
+        padding: 2% 0;
+        margin: 0 10%;
+        height: 13rem;
+        background-image: url(https://media.giphy.com/media/LUl2tRY5oVlBu/giphy.gif);
+        
+        color: white
+        
+    }
+    .flex2 button{
+        height:  2rem;
+        width: 5rem;
+    }
+
+    .evaluate-active input{
+        border : 3px solid black;
+    }
+
+  .checkTriangle output{
+      color: black;
+      background-color: white;
+  }
+   
+</style>
+</html>
